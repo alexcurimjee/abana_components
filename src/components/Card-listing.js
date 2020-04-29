@@ -168,7 +168,7 @@ export default function CardListing(props) {
                   classes={{
                     root: classes.tagChip,
                     outlined: classes.tagOutlined,
-                    label: classes.tagLabel
+                    label: classes.tagLabel,
                   }}
                 />
                 <Chip
@@ -177,7 +177,7 @@ export default function CardListing(props) {
                   classes={{
                     root: classes.tagChip,
                     outlined: classes.tagOutlined,
-                    label: classes.tagLabel
+                    label: classes.tagLabel,
                   }}
                 />
                 <Chip

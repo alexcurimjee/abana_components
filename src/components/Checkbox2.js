@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: "20px",
+
     border: "1px solid #dbdbdb",
     padding: "5px 10px",
     height: "200px",
@@ -37,11 +38,11 @@ export default function Checkbox2() {
     "Plastic"
   ];
 
-  const listItems = labelText.map(label => (
-    <Grid item xs={6} sm={4}>
+  const listItems = labelText.map((label, index) => 
+    <Grid item xs={6} sm={4} key={index}>
       <Check label={label} />
     </Grid>
-  ));
+  );
 
   return (
     <div>

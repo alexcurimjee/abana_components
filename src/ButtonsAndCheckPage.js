@@ -36,7 +36,7 @@ export default function ButtonsAndCheckPage() {
       <ul className="comment">
         <li>background color</li>
       </ul>
-      <TextField />
+      <TextField label="TextField"/>
       <hr style={{ borderColor: "#ececec", margin: "20px 0" }} />
 
       <h2> Buttons: </h2>

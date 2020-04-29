@@ -44,17 +44,17 @@ export default function Checkbox3() {
     "AUSTRALIA / PACIFIC"
   ];
 
-  const listItems = labelText.map(label => (
-    <Grid item xs={12} sm={6}>
+  const listItems = labelText.map((label, index) => 
+    <Grid item xs={12} sm={6} key={index}>
       <Check label={label} />
     </Grid>
-  ));
+  );
 
-  const listItems1 = labelText1.map(label => (
-    <Grid item xs={6} sm={4}>
+  const listItems1 = labelText1.map((label, index) => 
+    <Grid item xs={6} sm={4} key={index}>
       <Check label={label} />
     </Grid>
-  ));
+  );
 
   return (
     <div>

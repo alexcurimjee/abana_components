@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 import ComponentForm from "./ComponentForm";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme, makeStyles } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,11 +33,13 @@ const theme = createMuiTheme({
   }
 });
 
+
 export default function App() {
-//ADD A TEST HERE
+
+
   return (
     <MuiThemeProvider theme={theme}>
-      <ComponentForm />
+      <ComponentForm/>
     </MuiThemeProvider>
   );
 }
