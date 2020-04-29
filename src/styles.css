@@ -1,0 +1,19 @@
+body {
+  margin: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 100px;
+}
+
+.comment {
+  display: block;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.back-button {
+  padding: 8px 24px 8px 0px;
+}
+
+a {
+  color: #ff6158;
+}
