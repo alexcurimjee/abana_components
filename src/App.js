@@ -30,12 +30,10 @@ const theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"'
     ].join(",")
-    
   }
 });
 
 export default function App() {
-  const test = 'hello';
   return (
     <MuiThemeProvider theme={theme}>
       <ComponentForm />
