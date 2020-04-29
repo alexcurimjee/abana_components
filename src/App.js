@@ -35,7 +35,7 @@ const theme = createMuiTheme({
 });
 
 export default function App() {
-  const test = 'hello';
+
   return (
     <MuiThemeProvider theme={theme}>
       <ComponentForm />
