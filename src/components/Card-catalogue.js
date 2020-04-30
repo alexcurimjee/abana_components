@@ -13,7 +13,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import image from "../assets/images/image1.jpg";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
@@ -21,7 +20,8 @@ import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(theme => ({
     root: {
-      width: '215px',
+      //width: '215px',
+      margin: '10px',
     },
     cardContainer: {
         borderBottom: "1px solid #dbdbdb",
@@ -31,14 +31,14 @@ const useStyles = makeStyles(theme => ({
     },
 
     media: {
-        width: '183px',
+        width: '100%',
         borderRadius: '4px',
         height: 0,
         paddingTop: '133%',
       },
     
     actionIcons: {
-        justifyContent: 'end'
+        justifyContent: 'flex-end'
       },
 
     actionBookmark: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
 
   }));
   
-  export default function MediaCard() {
+  export default function MediaCard(props) {
     const classes = useStyles();
     const [state, setState] = React.useState({
         open: false
@@ -90,16 +90,16 @@ const useStyles = makeStyles(theme => ({
             <div className={classes.mediaContainer}>
                 <CardMedia
                 className={classes.media}
-                image= {image}
+                image= {props.image}
                 title="Catalogue Image"
             />
             </div>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-                Title
+            <Typography gutterBottom variant="h6" component="h2">
+                {props.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                {props.body}
             </Typography>
           </CardContent>
         </CardActionArea>

@@ -94,7 +94,7 @@ export default function FormPage() {
       }
     ]
   };
-  const datas = [data1,data2,data1, data2];
+  const datas = [data1,data2,data1,data2];
 
   return (
     <div>
