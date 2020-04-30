@@ -64,13 +64,13 @@ function getSteps() {
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return <Catalogue />;
+      return <ButtonsAndCheckPage />;
     case 1:
       return <CardsPage />;
     case 2:
       return <FormPage />;
     case 3:
-      return <ButtonsAndCheckPage />;
+      return <Catalogue />;
     default:
       return "Unknown stepIndex";
   }
