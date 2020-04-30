@@ -4,11 +4,13 @@ import "./styles.css";
 import ButtonsAndCheckPage from "./ButtonsAndCheckPage";
 import CardsPage from "./CardsPage";
 import FormPage from "./FormPage";
+import Catalogue from "./Catalogue";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
+import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import Typography from "@material-ui/core/Typography";
@@ -17,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
 
+  },
+  stepper: {
+    borderBottom: "1px solid #ececec",
   },
   backButton: {
     marginRight: theme.spacing(1),
@@ -39,21 +44,33 @@ const useStyles = makeStyles(theme => ({
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1)
+  },
+  container: {
+    margin: '20px 0 0 0',
+    padding: '20px 16px',
+    [theme.breakpoints.up("sm")]: {
+      margin: '20px 30px',
+      padding: '20px 24px',
+    }
+    
+
   }
 }));
 
 function getSteps() {
-  return ["Buttons & CheckBoxes", "RFI & RFQ Cards", "Forms"];
+  return ["Buttons & CheckBoxes", "RFI & RFQ Cards", "Forms", "Catalogue"];
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return <ButtonsAndCheckPage />;
+      return <Catalogue />;
     case 1:
       return <CardsPage />;
     case 2:
       return <FormPage />;
+    case 3:
+      return <ButtonsAndCheckPage />;
     default:
       return "Unknown stepIndex";
   }
@@ -85,14 +102,14 @@ export default function HorizontalLabelPositionBelowStepper() {
 
   return (
     <div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
+      <Stepper activeStep={activeStep} alternativeLabel className={classes.stepper}>
         {steps.map(label => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>
-      <div>
+      <Paper className={classes.container}>
         {activeStep === steps.length ? (
           <div>
             <Typography component={"span"} className={classes.instructions}>
@@ -126,7 +143,7 @@ export default function HorizontalLabelPositionBelowStepper() {
             </div>
           </div>
         )}
-      </div>
+      </Paper>
     </div>
   );
 }
